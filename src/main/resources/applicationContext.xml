@@ -61,8 +61,9 @@
     </bean>
 
     <!--Mybatis的Mapper文件识别-->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+    <bean id="mapperScannerConfig" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.baloo.nozama.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSession" />
     </bean>
 
 </beans>

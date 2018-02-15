@@ -1,73 +1,43 @@
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix='fmt' %> 
+         pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix='fmt' %>
 
 <html>
 
 <head>
-	<script src="js/jquery/2.0.0/jquery.min.js"></script>
-	<link href="css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
-	<script src="js/bootstrap/3.3.6/bootstrap.min.js"></script>
-	<link href="css/back/style.css" rel="stylesheet">
-	
-<script>
-function checkEmpty(id, name){
-	var value = $("#"+id).val();
-	if(value.length==0){
-		alert(name+ "不能为空");
-		$("#"+id)[0].focus();
-		return false;
-	}
-	return true;
-}
-function checkNumber(id, name){
-	var value = $("#"+id).val();
-	if(value.length==0){
-		alert(name+ "不能为空");
-		$("#"+id)[0].focus();
-		return false;
-	}
-	if(isNaN(value)){
-		alert(name+ "必须是数字");
-		$("#"+id)[0].focus();
-		return false;
-	}
-	
-	return true;
-}
-function checkInt(id, name){
-	var value = $("#"+id).val();
-	if(value.length==0){
-		alert(name+ "不能为空");
-		$("#"+id)[0].focus();
-		return false;
-	}
-	if(parseInt(value)!=value){
-		alert(name+ "必须是整数");
-		$("#"+id)[0].focus();
-		return false;
-	}
-	
-	return true;
-}
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../../bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../../../bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../../dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect. -->
+    <link rel="stylesheet" href="../../../dist/css/skins/skin-blue.min.css">
+    <%--<link rel="stylesheet" href="../../../css/backstyle.css">--%>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="http://how2j.cn/study/jquery.min.js"></script>
+    <![endif]-->
 
-
-$(function(){
-	$("a").click(function(){
-		var deleteLink = $(this).attr("deleteLink");
-		console.log(deleteLink);
-		if("true"==deleteLink){
-			var confirmDelete = confirm("确认要删除");
-			if(confirmDelete)
-				return true;
-			return false;
-			
-		}
-	});
-})
-</script>	
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+     <style>
+         .glyphicon {
+             font-size: 14px;
+             color: red;
+         }
+     </style>
 </head>
-<body>
+<body class="hold-transition skin-blue sidebar-mini">
+
 

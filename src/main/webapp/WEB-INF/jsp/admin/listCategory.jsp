@@ -20,7 +20,6 @@
                 </ol>
             </section>
             <br>
-
             <section class="content">
                 <div class="row">
                     <div class="col-xs-12">
@@ -68,7 +67,6 @@
                     <%@include file="../include/admin/adminPage.jsp" %>
                 </div>
             </section>
-        </div>
         <section class="content">
             <div class="row" align="c">
                 <!-- left column -->
@@ -106,10 +104,11 @@
                 </div>
             </div>
         </section>
+        </div>
     </div>
 </div>
 
-    <%@include file="../include/admin/adminFooter.jsp" %>
+<%@include file="../include/admin/adminFooter.jsp" %>
 <script>
     $(function () {
         $("#addForm").submit(function () {

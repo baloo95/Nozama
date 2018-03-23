@@ -27,6 +27,8 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>用户名称</th>
+                                        <th>封禁状态</th>
+                                        <th>操作</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -34,6 +36,8 @@
                                         <tr>
                                             <td>${u.id}</td>
                                             <td>${u.name}</td>
+                                            <td>1</td>
+                                            <td>1</td>
                                         </tr>
                                     </c:forEach>
                                     </tbody>

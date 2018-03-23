@@ -13,13 +13,25 @@
 <div class="wrapper">
     <div class="content-wrapper">
         <div class="workingArea">
-            <h1 class="label label-info">订单管理</h1>
+                <section class="content-header">
+                    <h1>
+                        订单管理
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="admin_category_list">所有分类</a></li>
+                        <li><a href="admin_product_list?cid=${c.id}"><i class="fa fa-dashboard"></i>${c.name}</a></li>
+                        <li class="active">订单管理</li>
+                    </ol>
+                </section>
             <br>
-
-            <div class="listDataTableDiv">
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box">
+            <div class="box-body">
                 <table class="table table-striped table-bordered table-hover1  table-condensed">
                     <thead>
-                    <tr class="success">
+                    <tr>
                         <th>ID</th>
                         <th>状态</th>
                         <th>金额</th>
@@ -47,8 +59,7 @@
                             <td><fmt:formatDate value="${o.confirmDate}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 
                             <td>
-                                <button oid=${o.id} class="orderPageCheckOrderItems btn btn-primary btn-xs
-                                ">查看详情</button>
+                                <button class="btn btn-primary btn-xs orderPageCheckOrderItems" oid=${o.id} >查看详情</button>
 
                                 <c:if test="${o.status=='waitDelivery'}">
                                     <a href="admin_order_delivery?id=${o.id}">
@@ -95,8 +106,11 @@
                     </tbody>
                 </table>
             </div>
-
-            <div class="pageDiv">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="pageDiv dataTables_paginate paging_simple_numbers pull-right">
                 <%@include file="../include/admin/adminPage.jsp" %>
             </div>
 

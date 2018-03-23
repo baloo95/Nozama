@@ -1,6 +1,7 @@
 package com.baloo.nozama.service;
 
 import com.baloo.nozama.pojo.Order;
+import com.baloo.nozama.pojo.OrderItem;
 
 import java.util.List;
 
@@ -18,4 +19,8 @@ public interface OrderService {
     void update(Order c);
     Order get(int id);
     List list();
+
+    float add(Order c,List<OrderItem> ois);
+
+    List list(int uid, String excludedStatus);
 }

@@ -81,6 +81,7 @@
                                     </div>
                                 </div>
                                 <div class="box-footer">
+                                    <input type="hidden" name="cid" value="${c.id}">
                                     <input type="reset" class="btn btn-default" placeholder="重 置" value="重置"/>
                                     <input type="submit" class="btn btn-info pull-right" placeholder="提 交" value="提交"/>
                                 </div>

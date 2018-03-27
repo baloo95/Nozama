@@ -15,7 +15,7 @@
                 <ol class="breadcrumb">
                     <li><a href="admin_category_list"><i class="fa fa-dashboard"></i> 所有分类</a></li>
                     <li><a href="admin_product_list?cid=${p.category.id}">${p.category.name}</a></li>
-                    <li class="active">${p.name}</li>
+                    <li class="active"><a href="admin_product_list?cid=${p.category.id}">${p.name}</a></li>
                     <li class="active">产品图片管理</li>
                 </ol>
             </section>

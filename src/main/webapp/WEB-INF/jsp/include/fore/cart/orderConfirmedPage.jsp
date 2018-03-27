@@ -2,7 +2,7 @@
          pageEncoding="UTF-8" isELIgnored="false"%>
 
 <div class="orderFinishDiv">
-    <div class="orderFinishTextDiv">
+    <div class="alert alert-success" role="alert" style="margin-left: 340px;margin-right: 300px">
         <img src="img/site/orderFinish.png">
         <span>交易已经成功，卖家将收到您的货款。</span>
     </div>

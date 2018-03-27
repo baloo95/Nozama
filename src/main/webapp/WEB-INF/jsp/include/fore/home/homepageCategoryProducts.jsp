@@ -13,12 +13,15 @@
     <c:set var="categorycount" scope="page" value="${param.categorycount}"/>
 </c:if>
 
-<div class="homepageCategoryProducts">
+<div class="homepageCategoryProducts" style="margin-left: 350px;margin-right: 350px">
     <c:forEach items="${cs}" var="c" varStatus="stc">
         <c:if test="${stc.count<=categorycount}">
-            <div class="eachHomepageCategoryProducts">
-                <div class="left-mark"></div>
-                <span class="categoryTitle">${c.name}</span>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                            ${c.name}
+                    </h3>
+                </div>
                 <br>
                 <c:forEach items="${c.products}" var="p" varStatus="st">
                     <c:if test="${st.count<=5}">
@@ -39,7 +42,4 @@
             </div>
         </c:if>
     </c:forEach>
-
-    <img id="endpng" class="endpng" src="img/site/end.png">
-
 </div>

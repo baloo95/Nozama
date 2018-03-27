@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" isELIgnored="false"%>
-
+<%--todo delete--%>
 <div class="productDetailDiv" >
     <div class="productDetailTopPart">
         <a href="#nowhere" class="productDetailTopPartSelectedLink selected">商品详情</a>

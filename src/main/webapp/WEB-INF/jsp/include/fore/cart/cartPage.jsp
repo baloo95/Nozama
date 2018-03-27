@@ -46,7 +46,6 @@
             else{
                 $(this).attr("src","img/site/cartSelected.png");
                 $(this).attr("selectit","selectit")
-                $(this).parents("tr.cartProductItemTR").css("background-color","#FFF8E1");
             }
             syncSelect();
             syncCreateOrderButton();
@@ -141,7 +140,7 @@
         });
 
         if(selectAny){
-            $("button.createOrderButton").css("background-color","#C40000");
+            $("button.createOrderButton").css("background-color","#00A6C7");
             $("button.createOrderButton").removeAttr("disabled");
         }
         else{
@@ -204,21 +203,20 @@
 </script>
 
 <title>购物车</title>
-<div class="cartDiv">
+<div class="cartDiv" style="margin-left: 300px;margin-right: 300px">
     <div class="cartTitle pull-right">
         <span>已选商品  (不含运费)</span>
         <span class="cartTitlePrice">￥0.00</span>
-        <button class="createOrderButton" disabled="disabled">结 算</button>
+        <button class="createOrderButton btn btn-info" disabled="disabled">结 算</button>
     </div>
 
-    <div class="cartProductList">
-        <table class="cartProductTable">
+    <div class="cartProductList" style="margin-top: 20px">
+        <table class="cartProductTable table table-striped table-bordered table-hover  table-condensed">
             <thead>
             <tr>
                 <th class="selectAndImage">
                     <img selectit="false" class="selectAllItem" src="img/site/cartNotSelected.png">
                     全选
-
                 </th>
                 <th>商品信息</th>
                 <th>单价</th>
@@ -238,11 +236,6 @@
                     <td>
                         <div class="cartProductLinkOutDiv">
                             <a href="foreproduct?pid=${oi.product.id}" class="cartProductLink">${oi.product.name}</a>
-                            <div class="cartProductLinkInnerDiv">
-                                <img src="img/site/creditcard.png" title="支持信用卡支付">
-                                <img src="img/site/7day.png" title="消费者保障服务,承诺7天退货">
-                                <img src="img/site/promise.png" title="消费者保障服务,承诺如实描述">
-                            </div>
                         </div>
 
                     </td>
@@ -272,23 +265,22 @@
                         <a class="deleteOrderItem" oiid="${oi.id}"  href="#nowhere">删除</a>
                     </td>
                 </tr>
+
             </c:forEach>
             </tbody>
-
         </table>
     </div>
 
     <div class="cartFoot">
         <img selectit="false" class="selectAllItem" src="img/site/cartNotSelected.png">
         <span>全选</span>
-        <!--         <a href="#">删除</a> -->
 
         <div class="pull-right">
             <span>已选商品 <span class="cartSumNumber" >0</span> 件</span>
 
             <span>合计 (不含运费): </span>
             <span class="cartSumPrice" >￥0.00</span>
-            <button class="createOrderButton" disabled="disabled" >结  算</button>
+            <button class="createOrderButton btn btn-info" disabled="disabled" >结  算</button>
         </div>
 
     </div>

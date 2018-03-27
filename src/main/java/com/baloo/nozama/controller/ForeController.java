@@ -159,7 +159,6 @@ public class ForeController {
 
     @RequestMapping("foresearch")
     public String search( String keyword,Model model){
-
         PageHelper.offsetPage(0,20);
         List<Product> ps= productService.search(keyword);
         productService.setSaleAndReviewNumber(ps);

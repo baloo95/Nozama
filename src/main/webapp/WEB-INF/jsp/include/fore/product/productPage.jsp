@@ -10,7 +10,9 @@
 
     <%@include file="imgAndInfo.jsp" %>
 
-    <%@include file="productReview.jsp" %>
+    <%@include file="productDetailAndReview.jsp" %>
 
-    <%@include file="productDetail.jsp" %>
+    <%--<%@include file="productReview.jsp" %>--%>
+
+    <%--<%@include file="productDetail.jsp" %>--%>
 </div>

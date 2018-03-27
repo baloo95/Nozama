@@ -29,7 +29,7 @@
                         <span class="productReview">评价<span class="productReviewNumber">${p.reviewCount}</span></span>
                         <span class="wangwang">
                     <a class="wangwanglink" href="#nowhere">
-                        <img src="img/site/wangwang.png">
+                        <span class="glyphicon glyphicon-phone"></span>
                     </a>
 
                     </span>

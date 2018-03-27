@@ -66,18 +66,42 @@
 
 </script>
 
-<div class="boughtDiv">
+<div class="boughtDiv" style="margin-left: 340px;margin-right: 300px">
     <div class="orderType">
-        <div class="selectedOrderType"><a orderStatus="all" href="#nowhere">所有订单</a></div>
-        <div><a  orderStatus="waitPay" href="#nowhere">待付款</a></div>
-        <div><a  orderStatus="waitDelivery" href="#nowhere">待发货</a></div>
-        <div><a  orderStatus="waitConfirm" href="#nowhere">待收货</a></div>
-        <div><a  orderStatus="waitReview" href="#nowhere" class="noRightborder">待评价</a></div>
-        <div class="orderTypeLastOne"><a class="noRightborder"> </a></div>
+
+        <ul class="nav nav-tabs">
+            <li>
+                <a orderStatus="all" href="#nowhere">
+                    所有订单
+                </a>
+            </li>
+            <li>
+                <a orderStatus="waitPay" href="#nowhere">
+                    待付款
+                </a>
+            </li>
+            <li>
+                <a orderStatus="waitDelivery" href="#nowhere">
+                    待发货
+                </a>
+            </li>
+            <li>
+                <a orderStatus="waitConfirm" href="#nowhere">
+                    待收货
+                </a>
+            </li>
+            <li>
+                <a orderStatus="waitReview" href="#nowhere">
+                    待评价
+                </a>
+            </li>
+        </ul>
     </div>
+
     <div style="clear:both"></div>
+
     <div class="orderListTitle">
-        <table class="orderListTitleTable">
+        <table class="table table-bordered">
             <tr>
                 <td>宝贝</td>
                 <td width="100px">单价</td>
@@ -91,7 +115,7 @@
 
     <div class="orderListItem">
         <c:forEach items="${os}" var="o">
-            <table class="orderListItemTable" orderStatus="${o.status}" oid="${o.id}">
+            <table class="orderListItemTable table table-bordered" orderStatus="${o.status}" oid="${o.id}">
                 <tr class="orderListItemFirstTR">
                     <td colspan="2">
                         <b><fmt:formatDate value="${o.createDate}" pattern="yyyy-MM-dd HH:mm:ss"/></b>
@@ -118,11 +142,6 @@
                         <td class="orderItemProductInfoPartTD">
                             <div class="orderListItemProductLinkOutDiv">
                                 <a href="foreproduct?pid=${oi.product.id}">${oi.product.name}</a>
-                                <div class="orderListItemProductLinkInnerDiv">
-                                    <img src="img/site/creditcard.png" title="支持信用卡支付">
-                                    <img src="img/site/7day.png" title="消费者保障服务,承诺7天退货">
-                                    <img src="img/site/promise.png" title="消费者保障服务,承诺如实描述">
-                                </div>
                             </div>
                         </td>
                         <td  class="orderItemProductInfoPartTD" width="100px">
@@ -154,7 +173,7 @@
 
                                 <c:if test="${o.status=='waitDelivery' }">
                                     <span>待发货</span>
-                                    <%--                                     <button class="btn btn-info btn-sm ask2delivery" link="admin_order_delivery?id=${o.id}">催卖家发货</button> --%>
+                                    <%--<button class="btn btn-info btn-sm ask2delivery" link="admin_order_delivery?id=${o.id}">催卖家发货</button> --%>
 
                                 </c:if>
 

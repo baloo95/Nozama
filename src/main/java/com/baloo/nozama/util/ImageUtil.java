@@ -48,7 +48,6 @@ public class ImageUtil {
             i = resizeImage(i, width, height);
             ImageIO.write((RenderedImage) i, "jpg", destFile);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

@@ -5,7 +5,7 @@
     <div class="col-sm-6">
         <div class="logo" style="margin-left: 300px">
             <h1>
-                <a href="${contextPath}">
+                <a href="/forehome">
                     <span style="color: #1ab7ea;">N</span>ozama
                 </a>
             </h1>

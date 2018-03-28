@@ -3,7 +3,7 @@
 
 <nav class="top  navbar-fixed-top">
     <div class="top_middle">
-    <a href="${contextPath}">
+    <a href="/forehome">
         <span style="color:#1ab7ea;margin:0px" class=" glyphicon glyphicon-home "></span>
         Nozama首页
     </a>

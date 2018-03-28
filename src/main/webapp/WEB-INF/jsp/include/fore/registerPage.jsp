@@ -38,22 +38,22 @@
 
 <form method="post" action="foreregister" class="registerForm">
 
-    <div class="registerDiv">
-        <div class="registerErrorMessageDiv">
+    <div class="registerDiv" style="margin-left: 340px;margin-right: 300px;">
+        <div class="registerErrorMessageDiv" style="visibility: hidden">
             <div class="alert alert-danger" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
                 <span class="errorMessage"></span>
             </div>
         </div>
 
-        <table class="registerTable" align="center">
+        <table class="table table-bordered" align="center">
             <tr>
                 <td  class="registerTip registerTableLeftTD">设置会员名</td>
                 <td></td>
             </tr>
             <tr>
                 <td class="registerTableLeftTD">登陆名</td>
-                <td  class="registerTableRightTD"><input id="name" name="name" placeholder="会员名一旦设置成功，无法修改" > </td>
+                <td  class="registerTableRightTD"><input class="form-control" id="name" name="name" placeholder="会员名一旦设置成功，无法修改" > </td>
             </tr>
             <tr>
                 <td  class="registerTip registerTableLeftTD">设置登陆密码</td>
@@ -61,16 +61,16 @@
             </tr>
             <tr>
                 <td class="registerTableLeftTD">登陆密码</td>
-                <td class="registerTableRightTD"><input id="password" name="password" type="password"  placeholder="设置你的登陆密码" > </td>
+                <td class="registerTableRightTD"><input class="form-control" id="password" name="password" type="password"  placeholder="设置你的登陆密码" > </td>
             </tr>
             <tr>
                 <td class="registerTableLeftTD">密码确认</td>
-                <td class="registerTableRightTD"><input id="repeatpassword" type="password"   placeholder="请再次输入你的密码" > </td>
+                <td class="registerTableRightTD"><input class="form-control" id="repeatpassword" type="password"   placeholder="请再次输入你的密码" > </td>
             </tr>
 
             <tr>
                 <td colspan="2" class="registerButtonTD">
-                    <a href="registerSuccess.jsp"><button>提   交</button></a>
+                    <a href="registerSuccess.jsp"><button class="btn btn-info" >提   交</button></a>
                 </td>
             </tr>
         </table>

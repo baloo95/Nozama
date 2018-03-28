@@ -60,9 +60,6 @@ public class OrderServiceImpl implements OrderService {
         float total = 0;
         add(o);
 
-        if(false)
-            throw new RuntimeException();
-
         for (OrderItem oi: ois) {
             oi.setOid(o.getId());
             orderItemService.update(oi);

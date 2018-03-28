@@ -116,7 +116,6 @@ public class ForeController {
     public String loginAjax(@RequestParam("name") String name, @RequestParam("password") String password,HttpSession session) {
         name = HtmlUtils.htmlEscape(name);
         User user = userService.get(name,password);
-
         if(null==user){
             return "fail";
         }
@@ -129,7 +128,6 @@ public class ForeController {
         Category c = categoryService.get(cid);
         productService.fill(c);
         productService.setSaleAndReviewNumber(c.getProducts());
-
         if(null!=sort){
             switch(sort){
                 case "review":
@@ -138,15 +136,12 @@ public class ForeController {
                 case "date" :
                     Collections.sort(c.getProducts(),new ProductDateComparator());
                     break;
-
                 case "saleCount" :
                     Collections.sort(c.getProducts(),new ProductSaleCountComparator());
                     break;
-
                 case "price":
                     Collections.sort(c.getProducts(),new ProductPriceComparator());
                     break;
-
                 case "all":
                     Collections.sort(c.getProducts(),new ProductAllComparator());
                     break;

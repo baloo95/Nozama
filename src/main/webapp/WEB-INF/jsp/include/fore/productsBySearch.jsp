@@ -14,12 +14,6 @@
             <a class="productLink" href="foreproduct?pid=${p.id}">
                     ${fn:substring(p.name, 0, 50)}
             </a>
-
-            <%--<div class="productInfo">--%>
-                <%--<span class="monthDeal ">月成交 <span class="productDealNumber">${p.saleCount}笔</span></span>--%>
-                <%--<span class="productReview">评价<span class="productReviewNumber">${p.reviewCount}</span></span>--%>
-            <%--</div>--%>
-
         </div>
     </c:forEach>
     <c:if test="${empty ps}">

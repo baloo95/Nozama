@@ -2,6 +2,7 @@ package com.baloo.nozama.controller;
 
 import com.baloo.nozama.pojo.*;
 import com.baloo.nozama.service.*;
+import com.baloo.nozama.util.MD5;
 import com.github.pagehelper.PageHelper;
 import comparator.*;
 import org.apache.commons.lang.math.RandomUtils;
@@ -61,6 +62,10 @@ public class ForeController {
             model.addAttribute("user",null);
             return "fore/register";
         }
+        /**
+         * MD5
+         */
+        user.setPassword(MD5.getInstance().getMD5(user.getPassword()));
         userService.add(user);
         return "redirect:registerSuccessPage";
     }
@@ -68,6 +73,10 @@ public class ForeController {
     @RequestMapping("forelogin")
     public String login(@RequestParam("name") String name, @RequestParam("password") String password, Model model, HttpSession session) {
         name = HtmlUtils.htmlEscape(name);
+        /**
+         * MD5
+         */
+        password = MD5.getInstance().getMD5(password);
         User user = userService.get(name,password);
 
         if(null==user){
@@ -87,7 +96,7 @@ public class ForeController {
     @RequestMapping("foreproduct")
     public String product( int pid, Model model) {
         Product p = productService.get(pid);
-
+ 
         List<ProductImage> productSingleImages = productImageService.list(p.getId(), ProductImageService.type_single);
         List<ProductImage> productDetailImages = productImageService.list(p.getId(), ProductImageService.type_detail);
         p.setProductSingleImages(productSingleImages);

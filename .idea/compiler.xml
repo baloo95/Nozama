@@ -9,8 +9,5 @@
         <module name="nozama" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="nozama" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

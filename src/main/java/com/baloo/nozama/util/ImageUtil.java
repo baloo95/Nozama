@@ -34,7 +34,6 @@ public class ImageUtil {
             BufferedImage img = new BufferedImage(RGB_OPAQUE, raster, false, null);
             return img;
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
             return null;
         }
